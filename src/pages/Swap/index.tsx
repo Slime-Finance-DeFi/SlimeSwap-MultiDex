@@ -487,6 +487,20 @@ const SwapForm = () => {
           </AutoColumn>
         </AppBody>
       )}
+  <br />
+      <br />
+      {swapName === 'SLIME' && (
+        <AppBody>
+          <AutoColumn gap="lg" justify="center">
+            <CardBody>
+              <Heading mb="8px">SlimeV2 Conditionally Deflacionary </Heading>
+              <Text color={theme.colors.text}>
+              SlimeV2 token burns 2.5% on sells / add liquidity  and 0% on buys / remove liquidity!, if you sell SlimeV2 increase slippage more than 2.5%!
+              </Text>
+            </CardBody>
+          </AutoColumn>
+        </AppBody>
+      )}
       <AdvancedSwapDetailsDropdown trade={trade} />
     </>
   )

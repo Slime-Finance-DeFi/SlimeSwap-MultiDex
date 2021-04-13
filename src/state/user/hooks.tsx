@@ -192,7 +192,16 @@ export function usePairAdder(): (pair: Pair) => void {
  * @param tokenB the other token
  */
 export function toV2LiquidityToken(swapName: string, [tokenA, tokenB]: [Token, Token]): Token {
-  return new Token(tokenA.chainId, Pair.getAddress(swapName, tokenA, tokenB), 18, 'Cake-LP', 'Pancake LPs')
+  let ticker = 'Cake-LP';
+  let name = 'Pancake LPs';
+
+  if(swapName==="SLIME")
+  {
+    ticker = 'Slime-LP';
+    name = 'Slime LPs';
+  }
+
+  return new Token(tokenA.chainId, Pair.getAddress(swapName, tokenA, tokenB), 18, ticker, name)
 }
 
 /**
@@ -202,6 +211,7 @@ export function useTrackedTokenPairs(): [Token, Token][] {
   const { chainId } = useActiveWeb3React()
   const tokens = useAllTokens()
 
+  console.log("lliq tokens ",tokens);
   // pinned pairs
   const pinnedPairs = useMemo(() => (chainId ? PINNED_PAIRS[chainId] ?? [] : []), [chainId])
 

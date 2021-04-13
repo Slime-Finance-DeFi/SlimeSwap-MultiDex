@@ -32,6 +32,8 @@ export default function Pool() {
 
   // fetch the user's balances of all tracked V2 LP tokens
   const trackedTokenPairs = useTrackedTokenPairs()
+
+
   const tokenPairsWithLiquidityTokens = useMemo(
     () => trackedTokenPairs.map((tokens) => ({ liquidityToken: toV2LiquidityToken(swapName, tokens), tokens })),
     [trackedTokenPairs, swapName]
@@ -43,7 +45,7 @@ export default function Pool() {
     account ?? undefined,
     liquidityTokens
   )
-
+  console.log("liquidityTokens",liquidityTokens);
   // fetch the reserves for all V2 pools in which the user has a balance
   const liquidityTokensWithBalances = useMemo(
     () =>
@@ -136,6 +138,21 @@ export default function Pool() {
               <Heading mb="8px">Project owner? </Heading>
               <Text color={theme.colors.text}>
               SlimeSwap share Swap fee on your pair tokens to provide more sustainability to your project, <a rel="noreferrer" href="https://forms.gle/kDkrh1vkjLYFiusw9" target="_blank">contact us! https://forms.gle/kDkrh1vkjLYFiusw9</a>
+              </Text>
+            </CardBody>
+          </AutoColumn>
+        </AppBody>
+      )}
+
+<br />
+      <br />
+      {swapName === 'SLIME' && (
+        <AppBody>
+          <AutoColumn gap="lg" justify="center">
+            <CardBody>
+              <Heading mb="8px">SlimeV2 Conditionally Deflacionary </Heading>
+              <Text color={theme.colors.text}>
+              SlimeV2 token burns 2.5% on sells / add liquidity  and 0% on buys / remove liquidity!, if you sell SlimeV2 increase slippage more than 2.5%!
               </Text>
             </CardBody>
           </AutoColumn>

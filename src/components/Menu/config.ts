@@ -2,9 +2,19 @@ import { MenuEntry } from 'uikit'
 
 const config: MenuEntry[] = [
   {
-    label: 'Home',
+    label: 'SlimeV2 Home',
     icon: 'HomeIcon',
-    href: 'https://slime.finance/',
+    href: 'https://app.slime.finance/',
+  },
+  {
+    label: 'SlimeV1 Home',
+    icon: 'HomeIcon',
+    href: 'https://v1.slime.finance/',
+  },
+  {
+    label: 'Swap SlimeV1 to SlimeV2',
+    icon: 'TradeIcon',
+    href: 'https://v1.slime.finance/swap',
   },
   {
     label: 'Trade',
@@ -21,55 +31,22 @@ const config: MenuEntry[] = [
     ],
   },
   {
-    label: 'Farms',
+    label: 'V2 Farms',
     icon: 'FarmIcon',
-    href: 'https://slime.finance/farms',
+    href: 'https://app.slime.finance/farms',
   },
   {
-    label: 'Pools',
-    icon: 'PoolIcon',
-    href: 'https://slime.finance/pools',
+    label: 'V1 Farms',
+    icon: 'FarmIcon',
+    href: 'https://v1.slime.finance/farms',
   },
-  {
-    label: 'Launch Pools',
-    icon: 'IfoIcon', 
-    href: 'https://slime.finance/launch',
-  
-  },
-  {
-    label: 'Slimy Lottery',
-    icon: 'TicketIcon',
-    href: 'https://slime.finance/lotto',
- },
-  {
-    label: "Automatic Launchpool Maker (Coming soon)",
-    href: "https://docs.slime.finance/roadmap/automatic-launchpool-maker",
-    icon: 'SunIcon', 
-  },
-   
- //  {
-//    label: 'Roulette',
-  //   icon: 'TicketIcon',
- //    href: '/roulette',
- //  },
-  {
-    label: 'Referrals',
-    icon: 'GroupsIcon',
-    href: 'https://slime.finance/slime-friends',
-  },
-  {
-    label: "Certik Audit (In-Progress) ",
-    href: "https://certik.org/projects/slime-finance",
-    icon: 'CertikIcon',
-    external:true
-    
-  },
+
   // {
   //   label: 'Pools',
   //   icon: 'PoolIcon',
   //   href: '/pools',
   // },
-   
+
    // {
   //   label: 'NFT',
    //  icon: 'NftIcon',
@@ -127,16 +104,16 @@ const config: MenuEntry[] = [
         label: "Treasury fund report",
         href: "https://slime.finance/reports/buybacks.html",  external:true
       },
-    
-      
-     
+
+
+
     ],
   },
   {
     label: 'Listings',
     icon: 'InfoIcon',
     items: [
-   
+
       {
         label: "CoinMarketCap",
         href: "https://coinmarketcap.com/currencies/slime-finance/",
@@ -156,8 +133,8 @@ const config: MenuEntry[] = [
         label: "DappRadar",
         href: "https://dappradar.com/binance-smart-chain/defi/slime-finance",
         external:true
-      }  
-     
+      }
+
     ],
   },
   // {
@@ -165,8 +142,8 @@ const config: MenuEntry[] = [
   //   icon: 'IfoIcon',
   //   href: '/ifo',
   // },
-   
+
 ]
- 
+
 export default config
- 
+
